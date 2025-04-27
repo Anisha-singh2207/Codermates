@@ -1,0 +1,30 @@
+.vision-container {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+  }
+  
+  .vision-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .vision-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-bottom: 30px;
+  }
+  
+  .vision-mission {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  

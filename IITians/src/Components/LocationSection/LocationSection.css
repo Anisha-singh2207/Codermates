@@ -1,0 +1,86 @@
+.locations-section {
+    background-image: url('/src/assets/mapwebp.webp');
+    background-size: contain; /* Ensure the entire image is visible */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating of the image */
+    padding: 80px 20px;
+    color: white;
+    height: 300px;
+    position: relative;
+  }
+  
+  
+  .locations-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  position: absolute; /* Ensure it covers the entire container */
+  top: 0; /* Align with the top of the parent container */
+  left: 0; /* Align with the left of the parent container */
+  width: 100%; /* Ensure it spans the entire width */
+  height: 100%; /* Make sure the overlay covers the entire container height */
+  border-radius: 10px; /* Optional: rounded corners */
+  padding: 20px; /* Optional: Padding for inner content */
+  box-sizing: border-box; /* Make sure padding doesn't affect the height/width */
+  }
+  
+  .locations-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+  
+  .locations-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .location-card {
+    text-align: center;
+    max-width: 400px;
+  }
+  
+  .city-name {
+    font-weight: bold;
+    font-size: 24px;
+    color:white; 
+    margin-bottom: 10px;
+  }
+  
+  .address {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .contact-item .icon {
+    color: #00bfff; /* blue icons */
+  }
+  
+  .contact-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .locations-cards {
+      flex-direction: row;
+      justify-content: center; /* Corrected here */
+    }
+  }
+  

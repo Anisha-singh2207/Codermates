@@ -1,0 +1,18 @@
+{
+    "slides" :[
+    {
+        "src":"https://iitiansacademy.in/img/slider/9c8693b7-3511-4bb0-b3b4-63294ba3f645.jpg",
+        "alt":"Image 1"
+    },
+
+    {
+        "src":"https://iitiansacademy.in/img/slider/ae65a423-c1fc-450b-a355-397d71893b47.jpg",
+        "alt":"Image 2"
+    },
+  
+    {
+        "src":"https://iitiansacademy.in/img/slider/b75159c4-11d2-42e9-a061-9085b0317d81.jpg",
+        "alt":"Image 2"
+    }
+]
+}
