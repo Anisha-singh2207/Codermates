@@ -1,0 +1,45 @@
+/* WhyChooseUs.css */
+
+.why-choose-us {
+    background: #f9f9f9;
+    padding: 4rem 2rem;
+  }
+  
+  .why-choose-us-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .why-choose-us-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .point-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  
+  .point-icon {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-right: 1rem;
+    margin-top: 0.3rem;
+  }
+  
+  .point-item h3 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+  }
+  
+  .point-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+  }
+  

@@ -1,0 +1,57 @@
+/* KeyFeatures.css */
+
+.key-features {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+  }
+  
+  .key-features-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .key-features-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .key-features-content {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .key-features-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .feature-icon {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-right: 1rem;
+    margin-top: 0.3rem;
+  }
+  
+  .feature-item h3 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0;
+    color: #222;
+  }
+  
+  .feature-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+  }
+  
