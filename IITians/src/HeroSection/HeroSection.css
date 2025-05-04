@@ -1,121 +1,104 @@
 /* Main Hero Section Layout */
 .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    height: 100vh;
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+  /* padding: 0 20px; */
+  box-sizing: border-box;
+}
+
+/* Left side (image or Lottie) */
+.hero-left {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Apply only zoom-in animation */
+.hero-image,
+.hero-lottie {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomIn 2s ease-in-out forwards;
+}
+
+/* Right side (text content) */
+.hero-right {
+  flex: 1;
+  text-align: center;
+  /* padding: 40px; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-logo {
+  width: 150px;
+  margin-bottom: 20px;
+  display: block;
+  margin: 0 auto 10px auto; 
+}
+
+.hero-right h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.hero-right p {
+  font-size: 18px;
+  color: #1571E7;
+  line-height: 1.6;
+}
+
+/* ========== Animations ========== */
+
+/* Fade-in (keep for other elements if needed) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Zoom-in animation for image */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
   }
-  
-  /* Left side (animated image or Lottie) */
-  .hero-left {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  /* Apply animation to either image or Lottie */
-  .hero-image,
-  .hero-lottie {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    animation: float 3s ease-in-out infinite, fadeIn 2s ease-in-out forwards;
+}
+
+/* ========== Responsive Layout ========== */
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    height: auto;
   }
-  
-  /* Right side (text content) */
+
+  .hero-left,
   .hero-right {
-    flex: 1;
-    text-align: center;
-    padding: 40px;
+    width: 100%;
+    height: auto;
   }
-  
-  .hero-logo {
-    width: 150px;
-    margin-bottom: 20px;
+
+  .hero-right {
+    padding: 20px;
   }
-  
+
   .hero-right h2 {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 24px;
   }
-  
+
   .hero-right p {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.6;
+    font-size: 16px;
   }
-  
-  /* ========== Animations ========== */
-  
-  /* Fade-in */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  /* Slide-in from left (can be applied optionally) */
-  @keyframes slideInLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Zoom-in (optional alternative to fadeIn) */
-  @keyframes zoomIn {
-    from {
-      transform: scale(0.8);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  /* Floating animation (continuous loop) */
-  @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
-  }
-  
-  /* ========== Responsive Layout ========== */
-  
-  @media (max-width: 768px) {
-    .hero-container {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    .hero-left,
-    .hero-right {
-      width: 100%;
-      height: auto;
-    }
-  
-    .hero-right {
-      padding: 20px;
-    }
-  
-    .hero-right h2 {
-      font-size: 24px;
-    }
-  
-    .hero-right p {
-      font-size: 16px;
-    }
-  }
-  
+}

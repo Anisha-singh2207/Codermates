@@ -17,7 +17,7 @@ const HeroSection = () => {
           alt="IITian's Academy Logo"
           className="hero-logo"
         />
-        <h2><strong>Empowering</strong> Future Engineers and Doctors</h2>
+        <h2><strong>Empowering Future Engineers and Doctors</strong> </h2>
         <p>Welcome to IITian's family</p>
       </div>
     </div>

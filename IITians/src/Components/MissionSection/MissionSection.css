@@ -12,17 +12,18 @@
   .mission-text {
     flex: 1;
     max-width: 600px;
+    font-family: "Montserrat";
   }
   
   .mission-title {
-    font-size: 2.2rem;
+    font-size: 1.89rem;
     color: #000;
     font-weight: bold;
     margin-bottom: 20px;
   }
   
   .mission-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #333;
     line-height: 1.6;
   }
@@ -36,8 +37,8 @@
   
   .mission-image img {
     max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 100vh;
+    border-radius: 2px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
   }
   
