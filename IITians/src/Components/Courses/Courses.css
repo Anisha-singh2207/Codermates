@@ -5,6 +5,7 @@
 }
 
 .courses-heading {
+  font-family: "Montserrat";
   font-size: 2.2rem;
   margin-bottom: 40px;
   font-weight: bold;
@@ -47,6 +48,7 @@
 }
 
 .course-title {
+  font-family: "Montserrat";
   font-size: 1.1rem;
   margin-bottom: 10px;
   font-weight: 700;
@@ -55,6 +57,7 @@
 }
 
 .course-description {
+  font-family: "Montserrat";
   font-size: 0.95rem;
   color: #555;
   text-align: center;
@@ -74,10 +77,12 @@
 
 @media (max-width: 480px) {
   .courses-heading {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .course-description {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
+    color: black;
   }
+ 
 }

@@ -1,57 +1,152 @@
-/* KeyFeatures.css */
-
+/* Key Features Section Styling */
 .key-features {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 4rem 2rem;
-    background: #f9f9f9;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  background: #f9f9f9;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Key Features Image Styling */
+.key-features-image {
+  flex: 1;
+  min-width: 300px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.key-features-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
+/* Key Features Content Styling */
+.key-features-content {
+  font-family: "Montserrat";
+  flex: 1;
+  padding: 40px;
+  z-index: 2;
+  height: 100%;
+}
+
+/* Key Features Heading Styling */
+.key-features-content h2 {
+  font-family: "Montserrat";
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Feature Item Styling */
+.feature-item {
+  display: flex;
+  align-items: center; /* Ensures items are vertically centered */
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Feature Icon Styling */
+.feature-icon {
+  font-size: 1.8rem; /* Adjust the size of the icon */
+  color: #3498db;
+  margin-right: 1rem;
+  margin-top: 0.3rem;
+  flex-shrink: 0; /* Prevent the icon from shrinking */
+}
+
+/* Feature Item Title */
+.feature-item h3 {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+  color: #222;
+}
+
+/* Feature Item Description */
+.feature-item p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* ========== Responsive Layout for Smaller Screens ========== */
+@media (max-width: 768px) {
+  .key-features {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 1rem;
   }
-  
+
   .key-features-image {
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  .key-features-image img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    margin-bottom: 30px;
   }
-  
+
   .key-features-content {
-    flex: 1;
-    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
   }
-  
+
   .key-features-content h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
     margin-bottom: 2rem;
-    color: #333;
   }
-  
+
   .feature-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
   }
-  
+
   .feature-icon {
     font-size: 1.5rem;
+    margin-right: 1.5rem;
     color: #3498db;
-    margin-right: 1rem;
-    margin-top: 0.3rem;
+    flex-shrink: 0;
+    line-height: 1;
   }
-  
+
   .feature-item h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin: 0 0 0.5rem 0;
-    color: #222;
+    color: #2c3e50;
   }
-  
+
   .feature-item p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #666;
-    margin: 0;
+    margin: 0;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .key-features {
+    padding: 2rem 0.5rem;
+  }
+
+  .feature-icon {
+    font-size: 1.8rem;
+  }
+
+  .feature-item h3 {
+    font-size: 1.6rem;
+  }
+
+  .feature-item p {
+    font-size: 1.3rem;
+  }
+}

@@ -1,9 +1,9 @@
 .vision-container {
-    background-color: #2c3e50;
+    background-color: #163047;
     color: white;
     text-align: center;
     padding: 60px 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Montserrat";
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,19 +12,21 @@
   }
   
   .vision-title {
+    font-family: "Montserrat";
     font-size: 1.7rem;
     margin-bottom: 20px;
     font-weight: bold;
   }
   
   .vision-text {
-    font-size: 1rem;
+    font-family: "Montserrat";
+    font-size: 1.5rem;
     max-width: 800px;
     margin-bottom: 30px;
   }
   
   .vision-mission {
-    font-size: 1rem;
-    font-weight: normal;
+    font-size: 1.5rem;
+    font-weight:bold;
   }
   

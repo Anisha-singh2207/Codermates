@@ -1,4 +1,5 @@
 import React from "react";
+import { FaRocket } from "react-icons/fa"; // Rocket icon
 import "./WhyChooseUs.css";
 
 const points = [
@@ -35,7 +36,9 @@ const WhyChooseUs = () => {
         <h2>Why Choose Us</h2>
         {points.map((point) => (
           <div className="point-item" key={point.id}>
-            <div className="point-icon">✔</div>
+            <div className="point-icon">
+              <FaRocket />
+            </div>
             <div>
               <h3>{point.title}</h3>
               <p>{point.description}</p>
@@ -47,4 +50,4 @@ const WhyChooseUs = () => {
   );
 };
 
-export default WhyChooseUs;
+export default WhyChooseUs;

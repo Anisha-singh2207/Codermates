@@ -1,45 +1,84 @@
-/* WhyChooseUs.css */
-
+/* Section container */
 .why-choose-us {
-    background: #f9f9f9;
-    padding: 4rem 2rem;
+  background: #f9f9f9;
+  padding: 4rem 2rem;
+}
+
+/* Content layout */
+.why-choose-us-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Heading */
+.why-choose-us-content h2 {
+  font-family: "Montserrat";
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Each point item */
+.point-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+/* Icon styles */
+.point-icon {
+  font-size: 2rem;
+  color: #3498db;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.point-icon svg {
+  display: block; /* Prevent cropping */
+}
+
+/* Title */
+.point-item h3 {
+  font-family: "Montserrat";
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  color: #2c3e50;
+}
+
+/* Description */
+.point-item p {
+  font-family: "Montserrat";
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .why-choose-us {
+    padding: 3rem 1rem; /* Less horizontal padding */
   }
-  
+
   .why-choose-us-content {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
+    padding: 0 0.5rem; /* Optional: reduce inner content margin too */
   }
-  
-  .why-choose-us-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
-    color: #333;
-    text-align: center;
+}
+
+@media (max-width: 480px) {
+  .why-choose-us {
+    padding: 2rem 0.5rem;
   }
-  
-  .point-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 2rem;
+.point-item p {
+  font-size: 1.3rem;
+}
+  .why-choose-us-content {
+    padding: 0;
   }
-  
-  .point-icon {
-    font-size: 1.5rem;
-    color: #3498db;
-    margin-right: 1rem;
-    margin-top: 0.3rem;
-  }
-  
-  .point-item h3 {
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem 0;
-    color: #2c3e50;
-  }
-  
-  .point-item p {
-    font-size: 1rem;
-    color: #666;
-    margin: 0;
-  }
-  
+}
+

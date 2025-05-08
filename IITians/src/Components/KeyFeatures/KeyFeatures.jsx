@@ -1,4 +1,5 @@
 import React from "react";
+import { FaRocket } from "react-icons/fa"; // Importing the rocket icon from React Icons
 import "./KeyFeatures.css";
 
 const features = [
@@ -35,7 +36,10 @@ const KeyFeatures = () => {
         <h2>Key Features</h2>
         {features.map((feature) => (
           <div className="feature-item" key={feature.id}>
-            <div className="feature-icon">✔</div>
+            {/* Replacing tick icon with the FaRocket icon */}
+            <div className="feature-icon">
+              <FaRocket />
+            </div>
             <div>
               <h3>{feature.title}</h3>
               <p>{feature.description}</p>
@@ -47,4 +51,4 @@ const KeyFeatures = () => {
   );
 };
 
-export default KeyFeatures;
+export default KeyFeatures;

@@ -1,48 +1,108 @@
+/* Core Values Container */
 .core-values-container {
-    text-align: center;
-    padding: 60px 20px;
-    background: #f8f8f8;
+  text-align: center;
+  padding: 60px 20px; /* Ensure there's space around the container */
+  background: #f8f8f8;
+}
+
+/* Core Values Heading */
+.core-values-heading {
+  margin-top: 20px;
+  font-family: "Montserrat";
+  font-size: 36px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+/* Core Values Features Section */
+.core-values-features {
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Feature Card */
+.feature-card {
+  background: #f8f8f8;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+/* Hover Effect */
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Feature Icon */
+.feature-icon {
+  font-size: 80px; /* Default for small screens */
+  margin-bottom: 15px;
+  color: darkblue;
+}
+
+/* Feature Title */
+.feature-title {
+  font-family: "Montserrat";
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Feature Description */
+.feature-description {
+  font-family: "Montserrat";
+  font-size: 16px; /* Default increased for readability */
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ========== Responsive Layout ========== */
+
+/* On medium screens, make sure the text increases */
+@media (max-width: 768px) {
+  .core-values-container {
+    padding: 80px 20px; 
   }
-  
+
+  /* Increase font sizes */
   .core-values-heading {
-    font-size: 36px;
-    margin-bottom: 50px;
-    font-weight: bold;
+    font-size: 35px; /* Make the heading a bit bigger */
   }
-  
-  .core-values-features {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-  
-  .feature-card {
-    background: white;
-    padding: 20px;
-    width: 220px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .feature-card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .feature-icon {
-    font-size: 100px;
-    margin-bottom: 15px;
-    color: #007BFF; /* blue color */
-  }
-  
-  .feature-title {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
+
   .feature-description {
-    font-size: 14px;
-    color: #666;
+    /* text-align: left; */
+    font-size: 20px; /* Increase description font size */
   }
-  
+  .feature-title{
+    font-size: 20px;
+  }
+
+  .feature-icon {
+    font-size: 200px; /* Increase icon size */
+  }
+
+  /* Adjust card layout on mobile */
+  .feature-card {
+    max-width: 250px; /* Smaller width on mobile */
+    max-height: 200px;
+  }
+}
+
+/* On larger screens */
+@media (min-width: 1024px) {
+  .feature-card {
+    width: 280px; /* Ensure card width is correct */
+  }
+
+  .feature-icon {
+    font-size: 140px; /* Larger icons for larger screens */
+  }
+
+  .feature-description {
+    font-size: 20px; /* Larger description font */
+  }
+}

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './JouneyTimeline.css';
-
 
 const journeyData = [
   { year: '2015', title: 'Founded', description: 'IITians Academy was established with a vision to provide quality education.' },
@@ -10,26 +9,28 @@ const journeyData = [
 ];
 
 const JourneyTimeline = () => {
-  const [visibleItems, setVisibleItems] = useState([]);
-
   useEffect(() => {
-    const onScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight;
-      const updatedVisibleItems = journeyData.map((_, index) => {
-        const element = document.getElementById(`journey-item-${index}`);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top + window.scrollY < scrollPosition;
-          // 100px before reaching
-        }
-        return false;
+    const handleScroll = () => {
+      const center = window.innerHeight / 2;
+      const items = document.querySelectorAll('.timeline-item');
+
+      items.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        const itemCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(center - itemCenter);
+
+        const maxDistance = window.innerHeight / 2;
+        const opacity = 1 - Math.min(distance / maxDistance, 1);
+
+        item.style.opacity = opacity;
+        item.style.transform = `translateY(${50 * (1 - opacity)}px)`;
       });
-      setVisibleItems(updatedVisibleItems);
     };
 
-    window.addEventListener('scroll', onScroll);
-    onScroll(); // run initially
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // initial run
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -39,7 +40,7 @@ const JourneyTimeline = () => {
         {journeyData.map((item, index) => (
           <div 
             id={`journey-item-${index}`}
-            className={`timeline-item ${visibleItems[index] ? 'visible' : ''}`} 
+            className="timeline-item"
             key={index}
           >
             <div className="timeline-dot"></div>

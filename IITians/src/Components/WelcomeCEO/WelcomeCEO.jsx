@@ -3,7 +3,7 @@ import './WelcomeCEO.css';
 
 const WelcomeCEO = () => {
   return (
-    <div className="main-container">
+    <div className="main-container-ceo">
       <div className="ceo-section">
         <h2>Welcome from the CEO</h2>
         <p>
@@ -14,16 +14,21 @@ const WelcomeCEO = () => {
         </p>
 
         <div className="ceo-footer">
-          <div className="ceo-text">
+          {/* <div className="ceo-text">
             <p>All the best,</p>
             <p><strong>MDD sir</strong></p>
             <p>Chief Executive Officer</p>
-          </div>
+          </div> */}
           <img
             src="https://assets.storydoc.com/b4804fc30975071653e363e0b4a62ef0/ad62228c-3e41-4c8a-b600-0f2229fad120" // Replace with actual image address
             alt="CEO"
             className="ceo-img"
           />
+            <div className="ceo-text">
+            <p>All the best,</p>
+            <p><strong>MDD sir</strong></p>
+            <p>Chief Executive Officer</p>
+          </div>
         </div>
       </div>
     </div>

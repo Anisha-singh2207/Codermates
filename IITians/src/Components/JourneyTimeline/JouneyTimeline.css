@@ -1,108 +1,143 @@
 /* Main Container */
 .timeline-container {
-    padding: 60px 20px;
-    text-align: center;
-    max-width: 1000px; /* Add width to ensure the content is centered */
-    margin: 0 auto;    /* Center container */
-    position: relative;
-  }
-  
-  /* Heading Style */
-  .timeline-heading {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 50px;
-  }
-  
-  /* Timeline Line (vertical) */
-  .timeline {
-    position: relative;
-    padding: 20px 0;
-  }
-  
-  /* Timeline Dot */
-  .timeline-dot {
-    width: 12px;
-    height: 12px;
-    background-color: #007BFF;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    top: 10px;
-    transform: translateX(-50%);
-  }
-  
-  /* Timeline Item (initially hidden, with scroll effect) */
-  .timeline-item {
-    position: relative;
-    margin: 50px 0;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease-out;
-  }
-  
-  /* When timeline item becomes visible on scroll */
-  .timeline-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Content for each Timeline Item */
-  .timeline-content {
-    background: #f8f8f8;
-    padding: 20px;
-    width: 300px;
-    border-radius: 10px;
-    text-align: left;
-    position: relative;
-    margin-left: 60px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  
-  /* Year Header inside the Timeline Content */
-  .timeline-content h2 {
-    color: #007BFF;
-    margin-bottom: 10px;
-  }
-  
-  /* Title Header inside the Timeline Content */
-  .timeline-content h3 {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  /* Description Text inside the Timeline Content */
-  .timeline-content p {
-    color: #555;
-    font-size: 14px;
-  }
-  
-  /* Vertical Line in the Timeline */
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Heading Style */
+.timeline-heading {
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+/* Timeline Line (vertical) */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #007BFF;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  margin: 50px 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  will-change: opacity, transform;
+}
+
+/* Blue Dot per Timeline Item */
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #007BFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Timeline Content */
+.timeline-content {
+  font-family: "Montserrat";
+  background: #f8f8f8;
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Alternating left and right positioning */
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: 550px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 100px;
+}
+
+/* Headers & Text */
+.timeline-content h2 {
+  font-family: "Montserrat";
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+  font-family: "Montserrat";
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  font-family: "Montserrat";
+  color: #555;
+  font-size: 14px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
   .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 4px;
-    background: #007BFF;
-    transform: translateX(-50%);
+    left: 20px;
+    transform: none;
   }
-  
-  /* Alternating left and right positioning for timeline items */
-  .timeline-item:nth-child(odd) .timeline-content {
-    margin-left: 550px; /* Left side for odd items (2015, 2018) */
+  .timeline-content h2{
+    font-size: 1.5rem;
   }
-  
+  .timeline-content h3{
+    font-size: 1.5rem;
+  }
+
+  .timeline-content p{
+    font-size: 1.5rem;
+  }
+
+  .timeline-item {
+    margin: 40px 0;
+  }
+
+  .timeline-dot {
+    left: 15px;
+    transform: none;
+  }
+
+  .timeline-content {
+    font-family: "Montserrat";
+    width: calc(100% - 60px);
+    margin-left: 40px !important;
+    max-width: 100%;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
   .timeline-item:nth-child(even) .timeline-content {
-    margin-left: 100px; /* Right side for even items (2017, 2020) */
+    margin-left: 40px !important;
   }
-  
-  .timeline-item:nth-child(odd) .timeline-dot {
-    left: 50%; /* Left side dot */
+
+  .timeline-heading {
+    font-family: "Montserrat";
+    font-size: 28px;
   }
-  
-  .timeline-item:nth-child(even) .timeline-dot {
-    left: 50%; /* Right side dot */
-  }
-  
+}

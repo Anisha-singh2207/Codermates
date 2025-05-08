@@ -23,6 +23,7 @@ import FooterSection from './Components/FooterSection/FooterSection';
 // import GoogleMapComponent from './Components/GoogleMap/GoogleMap';
 import EducationBanner from './Components/EducationBanner/EducationBanner';
 import AboutSection from './Components/AboutSection/AboutSection';
+import Empower from './Components/Empower/Empower';
 // import Header from './Components/Header/Header';
 // import Carousel from './Components/Carsouel/Carsouel';
 // import { slides } from './data/carsouelData.json';
@@ -64,6 +65,7 @@ function App() {
               <LocationsSection />
               <LeadershipTeam />
               <SocialResponsibility />
+              <Empower/>
               <StatsSection />
               <KeyFeatures />
               <WhyChooseUs />

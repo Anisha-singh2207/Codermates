@@ -1,36 +1,35 @@
 /* Main container for the entire CEO section */
-.main-container {
-  background-color:#fdf9f2; /* Light background color for the main container */
-  /* padding: 20px; */
+.main-container-ceo {
+  background-color: #fdf9f2;
   display: flex;
-  justify-content: center; /* Centers the content */
+  justify-content: center;
   align-items: center;
-  min-height: 400px; 
+  padding: 40px 20px;
 }
 
 /* CEO section styling */
 .ceo-section {
- /* Light beige color */
-  padding: 40px;
   max-width: 500px;
   margin: auto;
   font-family: 'Segoe UI', sans-serif;
-  border-radius: 8px; /* Optional: smooth corners */
+  border-radius: 8px;
 }
 
 /* CEO section title */
 .ceo-section h2 {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-family: "Montserrat";
+  font-size: 22px;
+  margin-bottom: 16px;
   font-weight: bold;
   color: #333;
 }
 
 /* CEO section text */
 .ceo-section p {
-  font-size: 13px;
-  color: #555;
-  line-height: 1.6;
+  font-family: "Montserrat";
+  font-size: 15px;
+  color: black;
+  line-height: 1.7;
 }
 
 /* Footer section styling */
@@ -39,15 +38,16 @@
   align-items: center;
   justify-content: flex-end;
   margin-top: 30px;
+  gap: 15px;
 }
 
 /* Footer text styling */
 .ceo-text {
-  margin-right: 15px;
+  color: black;
+  font-family: "Montserrat";
   text-align: right;
 }
 
-/* CEO footer text */
 .ceo-text p {
   margin: 0;
   font-size: 14px;
@@ -60,4 +60,51 @@
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* 🔧 Responsive improvements for small screens */
+/* 🔧 Improved Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .main-container-ceo {
+    padding: 20px 10px;
+  }
+
+  .ceo-section {
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  .ceo-section h2 {
+    font-size: 25px;
+    text-align: left;
+    margin-bottom: 18px;
+  }
+
+  .ceo-section p {
+    font-size: 22px;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  .ceo-footer {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 25px;
+    gap: 18px;
+  }
+
+  .ceo-text {
+    text-align: left;
+  }
+
+  .ceo-text p {
+    font-size: 20px;
+  }
+
+  .ceo-img {
+    width: 300px;
+    height: 300px;
+  }
 }

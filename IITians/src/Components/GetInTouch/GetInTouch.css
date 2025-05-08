@@ -1,94 +1,152 @@
-
-
 .get-in-touch {
-    background: #003333;
-    color: #fff;
-    padding: 4rem 2rem;
-  }
-  
+  background: #003333;
+  color: #fff;
+  padding: 4rem 2rem;
+}
+
+.get-in-touch-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.get-in-touch-left img {
+  max-width: 100%; /* Ensure image is responsive */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%;
+  transition: all 0.3s ease; /* Optional: smooth transition for resizing */
+}
+
+.get-in-touch-right {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.get-in-touch-right h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.get-in-touch-right p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.coordinator {
+  font-weight: bold;
+  color: white;
+}
+
+.buttons {
+  margin: 2rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  background: white;
+  color: #003333;
+}
+
+.secondary {
+  background: transparent;
+  color: white;
+}
+
+.btn:hover {
+  background: #ffffff;
+  color: #003333;
+  border-color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.social-icons i {
+  font-size: 2rem;
+}
+
+.social-icons p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
   .get-in-touch-container {
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
   }
-  
+
   .get-in-touch-left img {
-    max-width: 300px;
-    border-radius: 50%;
+      max-width: 80%;  /* Allow image to take up 80% of the container on medium screens */
   }
-  
+
   .get-in-touch-right {
-    flex: 1;
-    padding-left: 2rem;
+      padding-left: 0;
+      text-align: center;
   }
-  
+
   .get-in-touch-right h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+      font-size: 2rem;  /* Adjust heading size for smaller screens */
   }
-  
+
   .get-in-touch-right p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+      font-size: 1rem;  /* Adjust paragraph size for smaller screens */
   }
-  
-  .coordinator {
-    font-weight: bold;
-    color: white;
-  }
-  
-  .buttons {
-    margin: 2rem 0;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    margin-right: 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    border: 2px solid white;
-    transition: all 0.3s ease;
-  }
-  
-  .primary {
-    background:white;
-    color: #003333;
-  }
-  
-  .secondary {
-    background: transparent;
-    color: white;
-  }
-  
-  .btn:hover {
-    background: #ffffff;
-    color: #003333;
-    border-color: #ffffff;
-  }
-  
+
   .social-icons {
-    display: flex;
-    justify-content: flex-start;
-    gap: 2rem;
-    margin-top: 2rem;
+      justify-content: center;  /* Center social icons on smaller screens */
   }
-  
-  .social-icons a {
-    color: white;
-    text-decoration: none;
-    text-align: center;
+}
+
+@media (max-width: 768px) {
+  .get-in-touch-left img {
+      max-width: 100%;  /* Image takes full width on small screens */
   }
-  
-  .social-icons i {
-    font-size: 2rem;
+
+  .get-in-touch-right h2 {
+      font-size: 1.8rem;  /* Slightly smaller heading */
   }
-  
-  .social-icons p {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
+
+  .get-in-touch-right p {
+      font-size: 1rem;  /* Consistent paragraph font size on smaller screens */
   }
-  
+}
+
+@media (max-width: 480px) {
+  .get-in-touch-left img {
+      max-width: 100%;  /* Image fully responsive on extra small screens */
+  }
+
+  .get-in-touch-right h2 {
+      font-size: 1.6rem;  /* Heading size for very small screens */
+  }
+
+  .get-in-touch-right p {
+      font-size: 0.9rem;  /* Adjust text size for very small screens */
+  }
+}

@@ -22,6 +22,7 @@ html, body {
 
 /* Subtitle or supporting text */
 .education-banner p {
+  font-family: "Montserrat";
   font-size: 15px;
   color: white;
   margin: 0 0 10px 0; /* Spacing below paragraph */
@@ -29,6 +30,7 @@ html, body {
 
 /* Main title (e.g., "Empowering Future IITIANS") */
 .education-banner .main-title {
+  font-family: "Montserrat";
   font-size: 15px;
   font-weight: bold;
   color: white;
@@ -42,10 +44,12 @@ html, body {
   }
 
   .education-banner p {
-    font-size: 1rem;
+    font-family: "Montserrat";
+    font-size: 1.5rem;
   }
 
   .education-banner .main-title {
+    font-family: "Montserrat";
     font-size: 1.5rem;
   }
 }
