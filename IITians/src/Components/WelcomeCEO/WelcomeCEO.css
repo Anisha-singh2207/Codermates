@@ -28,7 +28,7 @@
 .ceo-section p {
   font-family: "Montserrat";
   font-size: 15px;
-  color: black;
+  /* color: black; */
   line-height: 1.7;
 }
 
@@ -43,7 +43,7 @@
 
 /* Footer text styling */
 .ceo-text {
-  color: black;
+  /* color: black; */
   font-family: "Montserrat";
   text-align: right;
 }

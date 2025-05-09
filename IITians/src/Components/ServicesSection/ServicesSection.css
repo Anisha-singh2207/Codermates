@@ -9,6 +9,7 @@
 }
 
 .services-container h2 {
+  color: black;
   font-family: "Montserrat";
   text-align: center;
   font-size: 23px;
@@ -67,6 +68,7 @@
 }
 
 .text-content h3 {
+  color: black;
   font-family: "Montserrat";
   font-size: 30px;
   margin-bottom: 15px;
@@ -74,6 +76,7 @@
 }
 
 .text-content p {
+  color: black;
   font-family: "Montserrat";
   font-size: 15px;
   line-height: 1.6;

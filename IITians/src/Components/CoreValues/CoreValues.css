@@ -87,8 +87,8 @@
 
   /* Adjust card layout on mobile */
   .feature-card {
-    max-width: 250px; /* Smaller width on mobile */
-    max-height: 200px;
+    max-width: 300px; /* Smaller width on mobile */
+    max-height: 100px;
   }
 }
 

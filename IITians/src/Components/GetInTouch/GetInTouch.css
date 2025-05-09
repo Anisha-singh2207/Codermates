@@ -26,6 +26,7 @@
 }
 
 .get-in-touch-right h2 {
+  
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -133,7 +134,7 @@
   }
 
   .get-in-touch-right p {
-      font-size: 1rem;  /* Consistent paragraph font size on smaller screens */
+      font-size: 1.5rem;  /* Consistent paragraph font size on smaller screens */
   }
 }
 
@@ -147,6 +148,6 @@
   }
 
   .get-in-touch-right p {
-      font-size: 0.9rem;  /* Adjust text size for very small screens */
+      font-size: 1rem;  /* Adjust text size for very small screens */
   }
 }
